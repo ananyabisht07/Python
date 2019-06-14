@@ -7,13 +7,13 @@ while(command):
 	f.write(command +"\n")
 	for i in f:	
 		if command==i:
-			print("Dont do this again")	
+			print("Dont do this again")
+			command=input("Enter command=")
 		elif(which(command)):
 			os.system(command)
 			command=input("Enter command=")
 		elif(command=="exit"):
 			sys.exit(0)
-			command=input("Enter command=")
 		else:
 			print("Command Not Found....")
 			command=input("Enter command=")
