@@ -3,7 +3,7 @@ count=0
 f=open("a",'r')
 #Checking for correct command 
 if input1[:3] == "rid" :			
- 	if "-" == input1[4] :
+ 	if "-" == input1[4] : 
 #FOR NUMBER AT STARTING OF EVERY LINE			
 		if 'n' == input1[5] :
 			for i in f :	
