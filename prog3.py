@@ -11,3 +11,4 @@ if count==0:
 	par="hello"+a
 	encPass=crypt.crypt(par,"22")
 	os.system("useradd -m -p" + encPass +" "+a)
+ 
