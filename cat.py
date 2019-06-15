@@ -29,5 +29,5 @@ if input1[:3] == "rid" :
 		for i in f :	
 			print(i)
 
-else :
+else : 
 	print("INCORRECT COMMAND")
