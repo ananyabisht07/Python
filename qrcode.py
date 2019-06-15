@@ -12,3 +12,4 @@ for i in search(web,tld="co.in",lang="eng",num=3,start=0,stop=3,pause=2):
 	url=pyqrcode.create(i)
 	url.svg("myqr{}.svg",scale=8)
 webbrowser.open("https://www.google.com/search?q="+web)
+
