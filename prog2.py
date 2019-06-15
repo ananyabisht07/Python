@@ -6,3 +6,4 @@ topic=search(web,stop=10)
 for i in topic:
 	f.write(i + "\n")
 webbrowser.open("https://www.google.com/search?q="+web)
+
