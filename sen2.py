@@ -1,18 +1,21 @@
 #!/usr/bin/python2
-import socket
+#sender
+from socket import *
 import sys
 rev_ip="127.0.0.1"
 rev_port=4444
 
-s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
-s.bind((rev_ip,rev_port))
-s.listen(1)
-conn=s.accept()
-filename=input(str("Please enter the filename of the file:"))
+s=socket(AF_INET,SOCK_DGRAM)
+addr=(rev_ip,rev_port)
+
+filename=sys.argv[1]
+s.sendto(filename,addr)
 filee=open(filename,'rb')
 file_data=filee.read(1024)
-conn.send(file_data)	
-	
-	
+while(file_data):
+	if(s.sendto(file_data,addr)):
+		print("sending....")
+		file_data=filee.read(1024)
 	
 s.close()
+filee.close()
