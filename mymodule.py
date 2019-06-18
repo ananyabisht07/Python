@@ -14,11 +14,11 @@ def fun1(name):
 		speech.runAndWait()		
 	elif '11'<hr<'16':
 		speech=pyttsx3.init()
-		speech.say("Good Afternoon")
+		speech.say("Good Afternoon" + name)
 		speech.runAndWait()
 	else:
 		speech=pyttsx3.init()		
-		speech.say("Good Morning")
+		speech.say("Good Morning" + name)
 		speech.runAndWait()
 def add():
 	input_string=[int(x) for x in input("Enter Numbers:").split()]
