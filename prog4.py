@@ -1,6 +1,14 @@
-#!/bin/python3
-adhoc=[1,2,3,1,4,5,66,22,2,6,8,9]
-num_gret5=[i for i in adhoc if i>5]
-print("Number greater than 5 :",num_gret5)
-num_less2=[i for i in adhoc if i<=2]
-print("Number is smaller then equal to 2:",num_less2) 
+
+#!usr/bin/python3
+import os
+import crypt
+count=0
+a=input("Enter the input=")
+abc=list(a)
+for i in abc:
+	if i.isdigit():
+		count=1
+if count==0:
+	par="hello"+a
+	encPass=crypt.crypt(par,"22")
+	os.system("useradd -m -p" + encPass +" "+a)
